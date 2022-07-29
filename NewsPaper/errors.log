@@ -1,0 +1,61 @@
+2022-07-30 02:32:16,881 ERROR Internal Server Error: /accounts/login/ C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Unclosed tag on line 18: 'cache'. Looking for one of: endcache."), <traceback object at 0x000001630B1157C0>)
+Traceback (most recent call last):
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\templatetags\cache.py", line 84, in do_cache
+    nodelist = parser.parse(("endcache",))
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\template\base.py", line 581, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 18: 'cache'. Looking for one of: endcache.
+2022-07-30 02:32:16,884 ERROR "GET /accounts/login/?next=/ HTTP/1.1" 500 201142 C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\venv\lib\site-packages\django\core\servers\basehttp.py None
+2022-07-30 02:33:21,607 ERROR check3 C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\NewsPaper\news\views.py None
+2022-07-30 02:33:21,607 ERROR check4 C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\NewsPaper\news\views.py None
+2022-07-30 02:33:21,607 ERROR check5 C:\Users\c89an\PycharmProject\pythonProject\News Portal 9\NewsPaper\news\views.py None
